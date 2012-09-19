@@ -7,19 +7,19 @@
 # Stats update.
 #
 MAILTO=cron-errors@buildd.debian.org
-PATH=/bin:/usr/bin:/usr/local/bin:/srv/wanna-build/bin:/srv/buildd.debian.org/bin
+PATH=/bin:/usr/bin:/usr/local/bin:/org/wanna-build/bin:/org/buildd.debian.org/bin
 
-*/5 * * * *	/srv/wanna-build/bin/process-triggers
+*/5 * * * *	/org/wanna-build/bin/process-triggers
 
-43 * * * *       /srv/buildd.debian.org/bin/wb-export
+43 * * * *       /org/buildd.debian.org/bin/wb-export
 
-3  0 * * *       make -sC /srv/wanna-build/etc/cron check
+3  0 * * *       make -sC /org/wanna-build/etc/cron check
 
-4  0 * * *       /srv/buildd.debian.org/mbox/fix-up-permissions
+4  0 * * *       /org/buildd.debian.org/mbox/fix-up-permissions
 
-0 0 * * *	/usr/sbin/logrotate /srv/wanna-build/etc/logrotate.conf -s /srv/wanna-build/etc/logrotate.status
+0 0 * * *	/usr/sbin/logrotate /org/wanna-build/etc/logrotate.conf -s /org/wanna-build/etc/logrotate.status
 
-*/15 * * * *	/srv/buildd.debian.org/wbpy/run-mqueue
+*/15 * * * *	/org/buildd.debian.org/wbpy/run-mqueue
 
 */5 * * * *	/home/aba/bin/mehdi-pull-push
 

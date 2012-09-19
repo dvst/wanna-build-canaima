@@ -53,8 +53,8 @@ debian)
 	rsync --password-file "$PASSWORD_BASE/$1-buildd.rsync-password" $BUILDD_QUEUE_OPTIONS $USER@ftp-master.debian.org::buildd-sid/ "$TARGET/buildd-sid"
 	rsync --password-file "$PASSWORD_BASE/$1-buildd.rsync-password" $BUILDD_QUEUE_OPTIONS $USER@ftp-master.debian.org::buildd-experimental/ "$TARGET/buildd-experimental"
 	# Also sync the Maintainers and Uploaders files for consumption through the web interface.
-	rsync --password-file "$PASSWORD_FILE" $MIRROR_OPTIONS $USER@ftp-master.debian.org::debian/indices/Maintainers /srv/buildd.debian.org/etc/Maintainers
-	rsync --password-file "$PASSWORD_FILE" $MIRROR_OPTIONS $USER@ftp-master.debian.org::debian/indices/Uploaders /srv/buildd.debian.org/etc/Uploaders
+	rsync --password-file "$PASSWORD_FILE" $MIRROR_OPTIONS $USER@ftp-master.debian.org::debian/indices/Maintainers /org/buildd.debian.org/etc/Maintainers
+	rsync --password-file "$PASSWORD_FILE" $MIRROR_OPTIONS $USER@ftp-master.debian.org::debian/indices/Uploaders /org/buildd.debian.org/etc/Uploaders
 	;;
 debian-security)
 	chmod 0700 "$TARGET"
