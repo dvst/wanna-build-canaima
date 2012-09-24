@@ -220,3 +220,64 @@ sub isin {
 #}
 
 1;
+__END__
+
+=head1 NAME
+
+WannaBuild - Database meant to control automated builds packages 
+
+=head1 SYNOPSIS
+
+=head1 DESCRIPTION
+
+=head1 FUNCTIONS
+
+=head2 version_less
+
+g
+
+=head2 version_lesseq
+
+g
+
+=head2 version_eq
+
+g
+
+=head2 version_compare
+
+3 argumentos recibidos: version1, relacion(comparador) y version2.
+En caso que opt_correct_version_cmp al ser evaluado devuelva verdadero (hasta ahora no he visto en todo el ciclo de vida una asignacion de valor verdadero a esta variable), realiza llamado a comando de sistema "dpkg --compare-versions $v1 $rel $v2" y devuelve verdadero si el estatus es OK (0).
+
+=head2 do_version_cmp
+
+g
+
+=head2 order
+
+g
+
+=head2 version_cmp_single
+
+g
+
+=head2 split_version
+
+g
+
+=head2 binNMU_version
+
+g
+
+=head2 parse_date
+
+g
+
+=head2 isin
+
+g
+
+=head2 get_distributions
+
+COMMENTED - 
+
